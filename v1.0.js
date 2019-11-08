@@ -835,10 +835,12 @@
 				}
 			}
 
+			if(!_options.id){
+				return;
+			}
+
 			listeners.push(funcs);
-			
 			blockLists = new BlockListTracker();
-			
 			attachOrFire();
 		},
 		
