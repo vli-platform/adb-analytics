@@ -171,7 +171,7 @@
 	
 	var ofs = 'offset', cl = 'client';
 	var noop = function(){};
-	var _statsDomain = "stats.vliplatform.com";
+	var _statsDomain = "stats.vlitag.com";
 	var _cookieName = '__vliadb';
 	var objName = 'adbDetector';
 	var testedOnce = false;
