@@ -324,7 +324,7 @@
 	var listeners = []; // event response listeners
 	var baitNode = null;
 	var quickBait = {
-		cssClass: 'pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links'		
+		cssClass: 'pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links ad-area ads_container'	
 	};
 	var baitTriggers = {
 		nullProps: [ofs + 'Parent'],
