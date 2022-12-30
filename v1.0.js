@@ -172,7 +172,7 @@
 	var ofs = 'offset', cl = 'client';
 	var noop = function(){};
 	var _requestDomain = "//vli-platform.github.io/adb-analytics/cfg.json";
-	var _statsDomain = "stats.vlitag.com";
+	var _statsDomain = "//stats.vlitag.com/abd";
 	var _cookieName = '__vliadb';
 	var objName = 'adbDetector';
 	var testedOnce = false;
