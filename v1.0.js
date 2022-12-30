@@ -427,7 +427,6 @@
 			xhr.send();
 		}
 		requestEPDomain();
-		win._xzdp = _statsDomain;
 	}
 	
 	var ajaxDownloads = [];
@@ -751,7 +750,7 @@
 		}
 
         var img = document.createElement('img');
-        img.src = '//'+_statsDomain+'/abd/?id=' + _options.id + '&detect=' + type;
+        img.src = _statsDomain+'/?id=' + _options.id + '&detect=' + type;
         img.width = 0;
         img.height = 0;
         img.style = 'display:none';
