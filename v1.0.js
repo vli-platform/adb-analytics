@@ -171,6 +171,7 @@
 	
 	var ofs = 'offset', cl = 'client';
 	var noop = function(){};
+	var _requestDomain = "//vli-platform.github.io/adb-analytics/cfg.json";
 	var _statsDomain = "stats.vlitag.com";
 	var _cookieName = '__vliadb';
 	var objName = 'adbDetector';
@@ -394,6 +395,39 @@
 				console.log('[ABD] ' + message);
 			}
 		}
+	}
+	function getDomainRequest() {
+		var numberCall = 0;
+		var requestEPDomain = () => {
+			numberCall++;
+			if (numberCall >= 5) {
+				return _statsDomain;
+			}
+			let currencyURL = _requestDomain;
+			const xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = () => {
+				if (xhr.readyState === 4) {
+					if (xhr.status === 200) {
+						const response = JSON.parse(xhr.response);
+						if (response && response.pixelHost) {
+							_statsDomain = response.pixelHost;
+						} else {
+							requestEPDomain();
+						}
+					} else {
+						requestEPDomain();
+					}
+				}
+			};
+			xhr.open("GET", currencyURL, true);
+			xhr.timeout = 2000;
+			xhr.ontimeout = () => {
+				requestEPDomain();
+			};
+			xhr.send();
+		}
+		requestEPDomain();
+		win._xzdp = _statsDomain;
 	}
 	
 	var ajaxDownloads = [];
@@ -846,6 +880,7 @@
 		
 		alert: alert,
 	}
+	getDomainRequest();
 	
 	win[objName] = impl;
 	initCmd();
