@@ -1,5 +1,5 @@
-{ "campId": "100", "source": "pocpoc", "creative": "111", "traffic": 1, "click": 3, "revenue": 1 }
-{ "campId": "100", "source": "pocpoc", "creative": "111", "traffic": 1, "click": 2, "revenue": 1 }
-{ "campId": "222", "source": "pocpoc", "creative": "222", "traffic": 1, "click": 3, "revenue": 2 }
-{ "campId": "222", "source": "pocpoc", "creative": "222", "traffic": 1, "click": 3, "revenue": 2 }
-{ "campId": "333", "source": "tabolla", "creative": "333", "traffic": 1, "click": 3, "revenue": 1.4 }
+{ "time": "2023-02-28", "campId": "100", "source": "pocpoc", "creative": "111", "traffic": 1, "click": 3, "revenue": 1 }
+{ "time": "2023-02-28", "campId": "100", "source": "pocpoc", "creative": "111", "traffic": 1, "click": 2, "revenue": 1 }
+{ "time": "2023-02-28", "campId": "222", "source": "pocpoc", "creative": "222", "traffic": 1, "click": 3, "revenue": 2 }
+{ "time": "2023-02-28", "campId": "222", "source": "pocpoc", "creative": "222", "traffic": 1, "click": 3, "revenue": 2 }
+{ "time": "2023-02-28", "campId": "333", "source": "tabolla", "creative": "333", "traffic": 1, "click": 3, "revenue": 1.4 }
